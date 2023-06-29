@@ -15,19 +15,24 @@ body{
   flex-direction: column;
 }
 
-.flex-child-converting-area {
-  height: 100%;
+.flex-child-converting-area { 
   flex:1;
+  
 
 }
 
 .convert-area1 {
   background-color: #D6E8EE;
+  
 }
 
 .convert-area2 {
   background-color: cadetblue;
   
+  
+}
+.converting-A{
+  text-align: center;
 }
 /* .flex-child-converting-area2{
   background-color: cadetblue;
@@ -35,7 +40,12 @@ body{
   flex:1;
 } */
 
-#number-box{
-  margin-top: 100px;
-  
+#units{
+  margin-left: 100px;
+}
+
+#number-box{ 
+  margin-top: 100px; 
+  margin-left: 100px;
+   
 }
