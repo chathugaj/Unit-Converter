@@ -3,5 +3,39 @@
 body{
   font-family: Ysabeau Office, sans-serif;
   font-weight: 300;
+}
 
+.heading{
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 20px;
+}
+.flex-parent-converting-area{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-child-converting-area {
+  height: 100%;
+  flex:1;
+
+}
+
+.convert-area1 {
+  background-color: #D6E8EE;
+}
+
+.convert-area2 {
+  background-color: cadetblue;
+  
+}
+/* .flex-child-converting-area2{
+  background-color: cadetblue;
+  height: 500px;
+  flex:1;
+} */
+
+#number-box{
+  margin-top: 100px;
+  
 }
