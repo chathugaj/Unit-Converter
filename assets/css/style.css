@@ -3,6 +3,7 @@
 body{
   font-family: Ysabeau Office, sans-serif;
   font-weight: 300;
+  
 }
 
 .heading{
@@ -47,5 +48,6 @@ body{
 #number-box{ 
   margin-top: 100px; 
   margin-left: 100px;
+  
    
 }
