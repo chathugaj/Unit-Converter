@@ -50,6 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+  /* convert button functions **/
+  let convertA = document.getElementsByClassName("convert-number")[0];
+  convertA.addEventListener("click", function (event) {
+    console.log(convertA);
+  });
 });
 
 function runConverter() {}

@@ -12,39 +12,45 @@
 </head>
 
 <body>
-  <h1 class="heading">Unit Converter <i class="fa-solid fa-repeat"></i></h1>
-  <div class="flex-parent-converting-area">
-    <div class="converting-A">
-      <div class="flex-child-converting-area convert-area1">
-        <label for="measuretype"></label>
-        <select name="measuretype" id="measuretype">
-          <option value="mass">Mass</option>
-          <option value="temprature">Temprature</option>
-          <option value="speed">Speed</option>
-          <option value="pressure" selected>Pressure</option>
-        </select>
-        <br>
-        <label for="conversion"><input id="number-box" type="number"></label>
+  <section>
+    <div class="flex-parent-converting-area">
 
-        <select name="conversion" id="conversion">
+      <h1 class="heading">Unit Converter <i class="fa-solid fa-repeat"></i></h1>
 
-        </select>
-      </div>
-      <button data-type="submit" class="submit-number">Submit</button>
 
-      <div class="flex-child-converting-area convert-area2">
-        <label for="conversion">
-          <input id="number-box1" type="number" disabled>
-        </label>
+      <div class="">
+        <div class="converting-A">
+          <div class="flex-child-converting-area convert-area1">
+            <label for="measuretype"></label>
+            <select name="measuretype" id="measuretype">
+              <option value="mass">Mass</option>
+              <option value="temprature">Temprature</option>
+              <option value="speed">Speed</option>
+              <option value="pressure" selected>Pressure</option>
+            </select>
+            <br>
+            <label for="conversion"><input id="number-box" type="number"></label>
 
-        <select name="conversion" id="conversion-1">
+            <select name="conversion" id="conversion">
 
-        </select>
+            </select>
+          </div>
+          <button data-type="submit" class="convert-number">Convert</button>
+
+          <div class="flex-child-converting-area convert-area2">
+            <label for="conversion">
+              <input id="number-box1" type="number" disabled>
+            </label>
+
+            <select name="conversion" id="conversion-1">
+
+            </select>
+          </div>
+        </div>
+
       </div>
     </div>
-
-  </div>
-
+  </section>
 
   <script src="https://kit.fontawesome.com/31e34e6a2a.js" crossorigin="anonymous"></script>
   <script src="assets/js/script.js"></script>
