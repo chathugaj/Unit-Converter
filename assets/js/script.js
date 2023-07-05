@@ -152,6 +152,37 @@ document.addEventListener("DOMContentLoaded", function () {
         input2.value = parseFloat(inputValue) / 28350;
       }
     }
+    /* lbs to other units**/
+    if (conversionA.value === "lbs") {
+      if (conversionB.value === "kg") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(2.205);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 2.205;
+      }
+      if (conversionB.value === "g") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(2.205);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 2.205;
+      }
+      if (conversionB.value === "mg") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(453600);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) * 453600;
+      }
+      if (conversionB.value === "Oz") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(16);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) * 16;
+      }
+    }
   });
 });
 
