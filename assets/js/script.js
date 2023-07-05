@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input2.value = parseFloat(inputValue) * 35.274;
       }
     }
-
+    /* convert grams to other units**/
     if (conversionA.value === "g") {
       if (conversionB.value === "kg") {
         let input1 = document.getElementById("number-box");
@@ -118,6 +118,38 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(28.35);
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) / 28.3;
+      }
+    }
+    /* converting mg's to other units**/
+    if (conversionA.value === "mg") {
+      if (conversionB.value === "kg") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(1000000);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 1000000;
+      }
+      if (conversionB.value === "g") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(1000);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 1000;
+      }
+      if (conversionB.value === "lbs") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(453600);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) * 453600;
+      }
+
+      if (conversionB.value === "Oz") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(28350);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 28350;
       }
     }
   });
