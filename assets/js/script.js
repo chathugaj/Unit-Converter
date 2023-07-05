@@ -87,6 +87,39 @@ document.addEventListener("DOMContentLoaded", function () {
         input2.value = parseFloat(inputValue) * 35.274;
       }
     }
+
+    if (conversionA.value === "g") {
+      if (conversionB.value === "kg") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(1000);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 1000;
+      }
+      if (conversionB.value === "mg") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(1000);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) * 1000;
+      }
+
+      if (conversionB.value === "lbs") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(453.6);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 453.6;
+      }
+
+      if (conversionB.value === "Oz") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(28.35);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 28.3;
+      }
+    }
   });
 });
 
