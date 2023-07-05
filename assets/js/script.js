@@ -183,6 +183,41 @@ document.addEventListener("DOMContentLoaded", function () {
         input2.value = parseFloat(inputValue) * 16;
       }
     }
+
+    /* converting Oz to other units**/
+    if (conversionA.value === "Oz") {
+      if (conversionB.value === "kg") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(35.274);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 35.274;
+      }
+
+      if (conversionB.value === "g") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(28.35);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) * 28.35;
+      }
+
+      if (conversionB.value === "mg") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(28350);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) * 28350;
+      }
+
+      if (conversionB.value === "lbs") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(16);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 16;
+      }
+    }
   });
 });
 
