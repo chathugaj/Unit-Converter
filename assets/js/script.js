@@ -218,6 +218,23 @@ document.addEventListener("DOMContentLoaded", function () {
         input2.value = parseFloat(inputValue) / 16;
       }
     }
+    /* converting km/h values to other units **/
+    if (conversionA.value === "km/h") {
+      if (conversionB.value === "mp/h") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(1.609);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 1.609;
+      }
+      if (conversionB.value === "m/s") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(3.6);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 3.6;
+      }
+    }
   });
 });
 
