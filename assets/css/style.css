@@ -5,6 +5,38 @@ body{
   font-weight: 300;
   background :url(../images/tech-image-A.jpeg)no-repeat; 
 }
+.tile-container-flex-parent {
+  display: flex;
+  flex-direction:row;
+  margin: 0px 150px;
+  background-color: white;
+  
+  
+}
+
+.tile-flex-child{
+ flex:1;
+ height: 100px;
+ background-color:white;
+ padding: 20px;
+ font-size: 15px;
+ text-align: center;
+ color: blueviolet;
+ letter-spacing: 2px;
+ margin: 20px;
+ border-radius: 5px;
+ box-shadow: 10px 10px 30px 1px lightblue;
+ border-color: lightblue;
+ 
+
+
+
+
+ 
+ 
+
+}
+
 
 .heading{
   text-align: center;
