@@ -269,6 +269,42 @@ document.addEventListener("DOMContentLoaded", function () {
         input2.value = parseFloat(inputValue) * 2.237;
       }
     }
+    /* converting torr to pascal **/
+    if (conversionA.value === "Torr") {
+      if (conversionB.value === "pa") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(133.3);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) * 133.3;
+      }
+
+      if (conversionB.value === "bar") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(750.1);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 750.1;
+      }
+    }
+
+    if (conversionA.value === "Pa") {
+      if (conversionB.value === "Torr") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(133.3);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) * 133.3;
+      }
+
+      if (conversionB.value === "bar") {
+        let input1 = document.getElementById("number-box");
+        let inputValue = input1.value;
+        console.log(750.1);
+        let input2 = document.getElementById("number-box1");
+        input2.value = parseFloat(inputValue) / 750.1;
+      }
+    }
   });
 });
 
