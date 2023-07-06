@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input2.value = parseFloat(inputValue) / 750.1;
       }
     }
-
+    /* converting pa to other units**/
     if (conversionA.value === "Pa") {
       if (conversionB.value === "Torr") {
         let input1 = document.getElementById("number-box");

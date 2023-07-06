@@ -3,8 +3,7 @@
 body{
   font-family: Ysabeau Office, sans-serif;
   font-weight: 300;
-  background :url(../images/tech-image-A.jpeg)no-repeat;
-  
+  background :url(../images/tech-image-A.jpeg)no-repeat; 
 }
 
 .heading{
@@ -21,35 +20,41 @@ input, select {
 .flex-parent-converting-area{
   display: flex;
   flex-direction: column;
+ 
 }
 
-.flex-child-converting-area { 
+.flex-child-converting-area1 { 
   flex:1;
-}
-
-.convert-area1 {
   background-color: #D6E8EE;
-  margin: 100px;
-  
-}
-
-.convert-area2 {
-  background-color: cadetblue;
-  margin: 100px;
-
+  margin-left: 150px;
+  margin-right: 150px;
  
   
+}
+.flex-child-converting-area3{
+  flex:1;
+  background-color: cornflowerblue;
+  margin-left: 150px;
+  margin-right: 150px;
+
+}
+
+.flex-child-converting-area2{
+  flex:1;
+  background-color: cadetblue;
+  margin-left: 150px;
+  margin-right: 150px;
+  
+
+}
+#measuretype{
+  text-align: center;
   
 }
-.converting-A{
-  text-align: center;
-}
-/*
-.flex-child-converting-area2{
-  background-color: cadetblue;
-  height: 500px;
-  flex:1;
-} **/
+
+
+
+
 
 #units{
   margin-left: 100px;
