@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@300&display=swap");
 
-body{
+body {
   font-family: Ysabeau Office, sans-serif;
   /* font-weight: 300; */
-  background :url(../images/tech-image-A.jpeg)no-repeat; 
+  background: url(../images/tech-image-A.jpeg) no-repeat;
   max-width: 2000px;
   font-size: 100%;
 }
@@ -30,115 +30,133 @@ body{
  border-color: lightblue;
 } */
 
-.heading{
+.heading {
   text-align: center;
   font-size: 2.5rem;
   padding: 0px;
 }
 
-input, select {
+input,
+select {
   height: 25px;
   width: 25%;
 }
 
-.flex-parent-converting-area{
+/* .flex-parent-converting-area {
   display: flex;
   flex-direction: column;
- 
-}
+} */
 
-.flex-child-converting-area1 { 
-  flex:1;
-  background-color:rgb(0,0,139,0.4);
-  /*margin: 0px 150px;*/
+/* .flex-child-converting-area1 {
+  flex: 1;
+  background-color: rgb(0, 0, 139, 0.4);
+  margin: 0px 150px;
   text-align: center;
-   
 }
-.flex-child-converting-area2{
+.flex-child-converting-area2 {
   flex: 1;
   height: 200px;
-
 }
 
-.flex-child-converting-area3{
-  flex:1;
-  background-color:cornflowerblue;
+.flex-child-converting-area3 {
+  flex: 1;
+  background-color: cornflowerblue;
   margin: 0px 150px;
- 
-
 }
 
-.flex-child-converting-area2{
-  flex:1;
+.flex-child-converting-area2 {
+  flex: 1;
   background-color: cadetblue;
- /* margin: 0px 150px;*/
+  margin: 0px 150px;
   text-align: center;
-  
-  
-
-}
-#measuretype{
+} */
+#measuretype {
   text-align: center;
-  
 }
 
-
-#units{
+#units {
   margin-left: 100px;
 }
 
-.number-box{ 
+.number-box {
   border: none;
   outline: none;
-  border-bottom: 1px solid white ;
-  background: transparent; 
+  border-bottom: 1px solid white;
+  background: transparent;
   margin: 10px;
 }
 
-.convert-number{
+.convert-number {
   padding: 10px;
   font-size: 20px;
   border-radius: 5px;
   box-shadow: 10px 10px 80px 1px white;
   border-color: white;
-
 }
-.conversion-1{
+.conversion-1 {
   padding: 50px;
   border: none;
   outline: none;
-  border-bottom: 1px solid white ;
-  background: transparent; 
-
+  border-bottom: 1px solid white;
+  background: transparent;
 }
 /* media qureies **/
 @media only screen and (max-width: 393px) {
-  
   .tile-container-flex-parent {
     display: flex;
     flex-direction: column;
     background-color: white;
+    height: 50%;
+    border-radius: 5px;
   }
-  
+
   .tile-flex-child {
-   flex:50%;
-   height: 10vw;
-   background-color:white;
-   padding: 10vw;
-   font-size: 5vw;
-   text-align: center;
-   color: blueviolet;
-   letter-spacing: 2px;
-   margin: 5vw;
-   border-radius: 5px;
-   box-shadow: 10px 10px 30px 1px lightblue;
-   border-color: lightblue;
+    flex: 1;
+    height: 8vw;
+    background-color: white;
+    padding: 10vw;
+    font-size: 2vw;
+    text-align: center;
+    color: blueviolet;
+    letter-spacing: 2px;
+    margin: 4%;
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px 1px lightblue;
+    border-color: lightblue;
   }
 
-  .flex-child-converting-area3{
+  .flex-parent-converting-area {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+  }
+
+  .flex-child-converting-area {
     width: 100%;
-    margin-left: 10px;
-
+    height: 20%;
+    border-radius: 5px;
   }
-
+  .tile-parent1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .tile-flex-child {
+    flex: 1;
+    width: 50%;
+  }
+  .convert-area-1 {
+    background-color: blueviolet;
+    height: 10vh;
+  }
+  .convert-area-2 {
+    background-color: skyblue;
+    height: 10vh;
+  }
+  .convert-number {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 7px;
+    box-shadow: 10px 10px 60px 1px white;
+    border-color: white;
+  }
 }
