@@ -79,9 +79,9 @@ select {
 }
 
 .number-box {
-  border: none;
+  /*border: none;*/
   outline: none;
-  border-bottom: 1px solid white;
+  /*border-bottom: 1px solid white;*/
   background: transparent;
   margin: 10px;
 }
@@ -106,7 +106,7 @@ select {
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 50%;
+    height: 28%;
     border-radius: 5px;
   }
 
@@ -128,29 +128,62 @@ select {
   .flex-parent-converting-area {
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 100vh;
   }
 
   .flex-child-converting-area {
     width: 100%;
     height: 20%;
     border-radius: 5px;
+    /* position: absolute;*/
   }
+  .conversion-A {
+    margin: 10% 5%;
+  }
+
+  .conversion-A > input,
+  .conversion-A > input:focus,
+  .conversion-A > select {
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    margin: 10px;
+    font-size: 10vw;
+  }
+
+  .conversion-B {
+    margin: 10% 5%;
+  }
+
+  .conversion-B > input,
+  .conversion-B > select {
+    color: blueviolet;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blueviolet;
+    background: transparent;
+    margin: 10px;
+    font-size: 10vw;
+  }
+
   .tile-parent1 {
     display: flex;
     flex-direction: row;
   }
   .tile-flex-child {
     flex: 1;
-    width: 50%;
+    width: 100%;
+    text-align: center;
   }
   .convert-area-1 {
     background-color: blueviolet;
-    height: 10vh;
+    height: 18vh;
   }
   .convert-area-2 {
     background-color: skyblue;
-    height: 10vh;
+    height: 18vh;
   }
   .convert-number {
     padding: 10px;
@@ -158,5 +191,100 @@ select {
     border-radius: 7px;
     box-shadow: 10px 10px 60px 1px white;
     border-color: white;
+    color: blueviolet;
+  }
+}
+
+@media only screen and (min-width: 393px) {
+  .tile-container-flex-parent {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 40%;
+    border-radius: 5px;
+  }
+
+  .tile-flex-child {
+    flex: 1;
+    height: 8vw;
+    background-color: white;
+    padding: 10vw;
+    font-size: 2vw;
+    text-align: center;
+    color: blueviolet;
+    letter-spacing: 2px;
+    margin: 4%;
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px 1px lightblue;
+    border-color: lightblue;
+  }
+
+  .flex-parent-converting-area {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .flex-child-converting-area {
+    width: 100%;
+    height: 20%;
+    border-radius: 5px;
+    /* position: absolute;*/
+  }
+  .conversion-A {
+    margin: 10% 5%;
+  }
+
+  .conversion-A > input,
+  .conversion-A > input:focus,
+  .conversion-A > select {
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    margin: 10px;
+    font-size: 10vw;
+  }
+
+  .conversion-B {
+    margin: 10% 5%;
+  }
+
+  .conversion-B > input,
+  .conversion-B > select {
+    color: blueviolet;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blueviolet;
+    background: transparent;
+    margin: 10px;
+    font-size: 10vw;
+  }
+
+  .tile-parent1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .tile-flex-child {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+  }
+  .convert-area-1 {
+    background-color: blueviolet;
+    height: 18vh;
+  }
+  .convert-area-2 {
+    background-color: skyblue;
+    height: 18vh;
+  }
+  .convert-number {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 7px;
+    box-shadow: 10px 10px 60px 1px white;
+    border-color: white;
+    color: blueviolet;
   }
 }
