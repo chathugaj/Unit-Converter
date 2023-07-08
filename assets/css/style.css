@@ -3,7 +3,7 @@
 body {
   font-family: Ysabeau Office, sans-serif;
   /* font-weight: 300; */
-  background: url(../images/tech-image-A.jpeg) no-repeat;
+  background-color: wheat;
   max-width: 2000px;
   font-size: 100%;
 }
@@ -40,6 +40,15 @@ input,
 select {
   height: 25px;
   width: 25%;
+}
+.tile-container-flex-parent {
+  max-width: 1900px;
+}
+.convert-area-2 {
+  max-width: 1900px;
+}
+.convert-area-1 {
+  max-width: 1900px;
 }
 
 /* .flex-parent-converting-area {
@@ -346,4 +355,19 @@ select {
 }
 
 @media only screen and (min-width: 1200px) {
+  .tile-container-flex-parent {
+    height: 26%;
+  }
+  .conversion-A {
+    margin: 8% 23%;
+  }
+  .conversion-B {
+    margin: 9% 15%;
+  }
+  .conversion-A {
+    margin: 4% 16%;
+  }
+  .conversion-B {
+    margin: 4% 15%;
+  }
 }
