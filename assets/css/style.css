@@ -12,7 +12,7 @@ body {
   text-align: center;
   font-size: 2.5rem;
   padding: 0px;
-  color: gray;
+  color: #33539e;
   font-size: 5vw;
 }
 
@@ -25,11 +25,12 @@ select {
   max-width: 1900px;
 }
 .convert-area-2 {
+  background-color: #7facd6;
   max-width: 1900px;
 }
 .convert-area-1 {
   max-width: 1900px;
-  background-color: rgb(138, 43, 226, 0.6);
+  background-color: #33539e;
 }
 
 #measuretype {
@@ -50,7 +51,7 @@ select {
 
 .convert-number {
   background: white;
-  color: blueviolet;
+  color: #33539e;
   border-style: none;
   border-color: white;
   height: fit-content;
@@ -68,6 +69,11 @@ select {
   border-bottom: 1px solid white;
   background: transparent;
 }
+
+.tile-flex-child {
+  color: #33539e;
+}
+
 /* media qureies **/
 @media only screen and (max-width: 393px) {
   .tile-container-flex-parent {
@@ -86,7 +92,7 @@ select {
     padding: 10vw;
     font-size: 2vw;
     text-align: center;
-    color: blueviolet;
+
     letter-spacing: 2px;
     margin: 4%;
     border-radius: 5px;
@@ -140,10 +146,10 @@ select {
 
   .conversion-B > input,
   .conversion-B > select {
-    color: blueviolet;
+    color: #33539e;
     border: none;
     outline: none;
-    border-bottom: 1px solid blueviolet;
+    border-bottom: 1px solid #33539e;
     background: transparent;
     margin: 10px;
     font-size: 10vw;
@@ -154,7 +160,6 @@ select {
     height: 25vh;
   }
   .convert-area-2 {
-    background-color: skyblue;
     height: 25vh;
   }
 }
@@ -194,10 +199,10 @@ select {
 
   .conversion-B > input,
   .conversion-B > select {
-    color: blueviolet;
+    color: #33539e;
     border: none;
     outline: none;
-    border-bottom: 1px solid blueviolet;
+    border-bottom: 1px solid #33539e;
     background: transparent;
     margin: 10px;
     font-size: 10vw;
@@ -226,7 +231,7 @@ select {
     padding: 10vw;
     font-size: 2vw;
     text-align: center;
-    color: blueviolet;
+
     letter-spacing: 2px;
     margin: 4%;
     border-radius: 5px;
@@ -238,7 +243,6 @@ select {
     height: 24vh;
   }
   .convert-area-2 {
-    background-color: skyblue;
     height: 18vh;
   }
 }
@@ -265,7 +269,6 @@ select {
   }
 
   .convert-area-2 {
-    background-color: skyblue;
     height: 40vh;
   }
   .conversion-A > input,
