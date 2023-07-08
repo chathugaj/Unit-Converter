@@ -73,6 +73,15 @@ select {
 .tile-flex-child {
   color: #33539e;
 }
+.tile-flex-child:hover {
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(127, 172, 214, 1) 100%
+  );
+}
 
 /* media qureies **/
 @media only screen and (max-width: 393px) {
