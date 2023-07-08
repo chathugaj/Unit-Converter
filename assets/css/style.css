@@ -172,7 +172,7 @@ select {
     border-radius: 5px;
   }
   .conversion-A {
-    margin: 10% 5%;
+    margin: 5% 5%;
   }
 
   .conversion-A > input,
@@ -189,7 +189,7 @@ select {
   }
 
   .conversion-B {
-    margin: 10% 5%;
+    margin: 5% 5%;
   }
 
   .conversion-B > input,

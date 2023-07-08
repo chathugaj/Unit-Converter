@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "mg") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(1000000);
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) * 1000000;
       }
@@ -75,14 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "lbs") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(2.205);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) * 2.205;
       }
       if (conversionB.value === "Oz") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(35.274);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) * 35.274;
       }
@@ -92,14 +91,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "kg") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(1000);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) / 1000;
       }
       if (conversionB.value === "mg") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(1000);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) * 1000;
       }
@@ -107,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "lbs") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(453.6);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) / 453.6;
       }
@@ -115,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "Oz") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(28.35);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) / 28.3;
       }
@@ -125,21 +124,21 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "kg") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(1000000);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) / 1000000;
       }
       if (conversionB.value === "g") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(1000);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) / 1000;
       }
       if (conversionB.value === "lbs") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(453600);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) * 453600;
       }
@@ -147,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "Oz") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(28350);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) / 28350;
       }
@@ -157,28 +156,28 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "kg") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(2.205);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) / 2.205;
       }
       if (conversionB.value === "g") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(2.205);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) / 2.205;
       }
       if (conversionB.value === "mg") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(453600);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) * 453600;
       }
       if (conversionB.value === "Oz") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(16);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) * 16;
       }
@@ -189,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "kg") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(35.274);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) / 35.274;
       }
@@ -197,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "g") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(28.35);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) * 28.35;
       }
@@ -205,104 +204,94 @@ document.addEventListener("DOMContentLoaded", function () {
       if (conversionB.value === "mg") {
         let input1 = document.getElementById("number-box");
         let inputValue = input1.value;
-        console.log(28350);
+
         let input2 = document.getElementById("number-box1");
         input2.value = parseFloat(inputValue) * 28350;
       }
 
       if (conversionB.value === "lbs") {
         let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(16);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) / 16;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) / 16;
       }
     }
     /* converting km/h values to other units **/
     if (conversionA.value === "km/h") {
       if (conversionB.value === "mp/h") {
-        let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(1.609);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) / 1.609;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) / 1.609;
       }
       if (conversionB.value === "m/s") {
-        let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(3.6);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) / 3.6;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) / 3.6;
       }
     }
     /* converting mp/h values to other units**/
     if (conversionA.value === "mp/h") {
       if (conversionB.value === "km/h") {
-        let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(1.609);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) * 1.609;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) * 1.609;
       }
       if (conversionB.value === "m/s") {
-        let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(2.237);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) / 2.237;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) / 2.237;
       }
     }
     /* converting m/s values to other units **/
     if (conversionA.value === "m/s") {
       if (conversionB.value === "km/h") {
-        let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(3.6);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) * 3.6;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) * 3.6;
       }
       if (conversionB.value === "mp/h") {
-        let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(2.237);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) * 2.237;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) * 2.237;
       }
     }
     /* converting torr to pascal **/
     if (conversionA.value === "Torr") {
       if (conversionB.value === "pa") {
-        let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(133.3);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) * 133.3;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) * 133.3;
       }
 
       if (conversionB.value === "bar") {
-        let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(750.1);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) / 750.1;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) / 750.1;
       }
     }
     /* converting pa to other units**/
     if (conversionA.value === "Pa") {
       if (conversionB.value === "Torr") {
-        let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(133.3);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) * 133.3;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) * 133.3;
       }
 
       if (conversionB.value === "bar") {
-        let input1 = document.getElementById("number-box");
-        let inputValue = input1.value;
-        console.log(750.1);
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) / 750.1;
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) / 750.1;
       }
     }
   });
