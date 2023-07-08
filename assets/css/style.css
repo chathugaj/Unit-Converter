@@ -75,7 +75,7 @@ select {
     background-color: white;
     height: 38%;
     border-radius: 5px;
-    height: 24%;
+    height: 45vh;
   }
 
   .tile-flex-child {
@@ -93,6 +93,16 @@ select {
     border-color: lightgray;
   }
 
+  .tile-parent1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .tile-flex-child {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+  }
+
   .flex-parent-converting-area {
     display: flex;
     flex-direction: column;
@@ -105,6 +115,7 @@ select {
     border-radius: 5px;
     /* position: absolute;*/
   }
+
   .conversion-A {
     margin: 10% 5%;
   }
@@ -119,6 +130,7 @@ select {
     background: transparent;
     margin: 10px;
     font-size: 10vw;
+    height: fit-content;
   }
 
   .conversion-B {
@@ -134,24 +146,16 @@ select {
     background: transparent;
     margin: 10px;
     font-size: 10vw;
+    height: fit-content;
   }
 
-  .tile-parent1 {
-    display: flex;
-    flex-direction: row;
-  }
-  .tile-flex-child {
-    flex: 1;
-    width: 100%;
-    text-align: center;
-  }
   .convert-area-1 {
     background-color: blueviolet;
-    height: 18vh;
+    height: 25vh;
   }
   .convert-area-2 {
     background-color: skyblue;
-    height: 18vh;
+    height: 25vh;
   }
 }
 
@@ -166,7 +170,6 @@ select {
     width: 100%;
     height: 20%;
     border-radius: 5px;
-    /* position: absolute;*/
   }
   .conversion-A {
     margin: 10% 5%;
@@ -205,7 +208,7 @@ select {
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 40%;
+    height: 65vh;
     border-radius: 5px;
   }
 
@@ -243,27 +246,29 @@ select {
 
 @media only screen and (min-width: 600px) {
   .tile-container-flex-parent {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    height: 45%;
-    border-radius: 5px;
+    flex-direction: row;
+    height: 18vh;
+  }
+
+  .tile-flex-child {
+    padding: 1vw;
+    font-size: 1.5vw;
   }
 
   .flex-parent-converting-area {
     display: flex;
     flex-direction: column;
-    height: 122vh;
+    height: 80vh;
   }
 
   .convert-area-1 {
     background-color: blueviolet;
-    height: 29vh;
+    height: 40vh;
   }
 
   .convert-area-2 {
     background-color: skyblue;
-    height: 25vh;
+    height: 40vh;
   }
   .conversion-A > input,
   .conversion-A > input:focus,
@@ -279,31 +284,25 @@ select {
 
 @media only screen and (min-width: 900px) {
   .tile-container-flex-parent {
-    flex-direction: row;
-    height: 16%;
+    height: 25vh;
   }
-
-  .tile-flex-child {
-    padding: 1vw;
-    font-size: 1.5vw;
+  .convert-area-1 {
+    height: 37vh;
   }
-  .convert-area-2 {
-    height: 28vh;
+  .convert-area-1 {
+    height: 37vh;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .tile-container-flex-parent {
-    height: 22%;
+    height: 25vh;
   }
   .convert-area-1 {
-    height: 32vh;
+    height: 37vh;
   }
-  .conversion-A {
-    margin: 8% 23%;
-  }
-  .conversion-B {
-    margin: 9% 15%;
+  .convert-area-1 {
+    height: 37vh;
   }
   .conversion-A {
     margin: 4% 16%;
