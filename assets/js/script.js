@@ -57,150 +57,18 @@ document.addEventListener("DOMContentLoaded", function () {
   /* convert button functions **/
   let convertA = document.getElementsByClassName("convert-number")[0];
   convertA.addEventListener("click", function (event) {
-    console.log(convertA);
+    let numberBoxArray = document.getElementsByClassName("number-box");
     /* convert kg to other units**/
-    if (conversionA.value === "kg") {
-      if (conversionB.value === "g") {
-        let inputValue = document.getElementById("number-box").value;
+    convertMass(numberBoxArray);
 
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 1000;
-      }
-      if (conversionB.value === "mg") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 1000000;
-      }
-
-      if (conversionB.value === "lbs") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 2.205;
-      }
-      if (conversionB.value === "Oz") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 35.274;
-      }
-    }
     /* convert grams to other units**/
-    if (conversionA.value === "g") {
-      if (conversionB.value === "kg") {
-        let inputValue = document.getElementById("number-box").value;
 
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 1000;
-      }
-      if (conversionB.value === "mg") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 1000;
-      }
-
-      if (conversionB.value === "lbs") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 453.6;
-      }
-
-      if (conversionB.value === "Oz") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 28.3;
-      }
-    }
     /* converting mg's to other units**/
-    if (conversionA.value === "mg") {
-      if (conversionB.value === "kg") {
-        let inputValue = document.getElementById("number-box").value;
 
-        let input2 = document.getElementById("number-box1");
-        input2.value = parseFloat(inputValue) / 1000000;
-      }
-      if (conversionB.value === "g") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 1000;
-      }
-      if (conversionB.value === "lbs") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 453600;
-      }
-
-      if (conversionB.value === "Oz") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 28350;
-      }
-    }
     /* lbs to other units**/
-    if (conversionA.value === "lbs") {
-      if (conversionB.value === "kg") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 2.205;
-      }
-      if (conversionB.value === "g") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 2.205;
-      }
-      if (conversionB.value === "mg") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 453600;
-      }
-      if (conversionB.value === "Oz") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 16;
-      }
-    }
 
     /* converting Oz to other units**/
-    if (conversionA.value === "Oz") {
-      if (conversionB.value === "kg") {
-        let inputValue = document.getElementById("number-box").value;
 
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 35.274;
-      }
-
-      if (conversionB.value === "g") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 28.35;
-      }
-
-      if (conversionB.value === "mg") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 28350;
-      }
-
-      if (conversionB.value === "lbs") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 16;
-      }
-    }
     /* converting km/h values to other units **/
     if (conversionA.value === "km/h") {
       if (conversionB.value === "mp/h") {
@@ -350,3 +218,99 @@ function createUnitOption(unit, selectElement) {
   selectElement.appendChild(option);
   option.innerHTML = unit;
 }
+/* convert mass refactoring**/
+function convertMass(numberBoxArray) {
+  const fromUnit = numberBoxArray[1].value;
+  const toUnit = numberBoxArray[3].value;
+  const inputValue = numberBoxArray[0].value;
+
+  let convertedValueElement = numberBoxArray[2];
+
+  if (fromUnit === "kg") {
+    if (toUnit === "g") {
+      convertedValueElement.value = parseFloat(inputValue) * 1000;
+    }
+    if (toUnit === "mg") {
+      convertedValueElement.value = parseFloat(inputValue) * 1000000;
+    }
+
+    if (toUnit === "lbs") {
+      convertedValueElement.value = parseFloat(inputValue) * 2.205;
+    }
+    if (toUnit === "Oz") {
+      convertedValueElement.value = parseFloat(inputValue) * 35.274;
+    }
+  }
+
+  if (fromUnit === "g") {
+    if (toUnit === "kg") {
+      convertedValueElement.value = parseFloat(inputValue) / 1000;
+    }
+    if (toUnit === "mg") {
+      convertedValueElement.value = parseFloat(inputValue) * 1000;
+    }
+
+    if (toUnit === "lbs") {
+      convertedValueElement.value = parseFloat(inputValue) / 453.6;
+    }
+
+    if (toUnit === "Oz") {
+      convertedValueElement.value = parseFloat(inputValue) / 28.3;
+    }
+  }
+
+  if (fromUnit === "mg") {
+    if (toUnit === "kg") {
+      convertedValueElement.value = parseFloat(inputValue) / 1000000;
+    }
+    if (toUnit === "g") {
+      convertedValueElement.value = parseFloat(inputValue) / 1000;
+    }
+    if (toUnit === "lbs") {
+      convertedValueElement.value = parseFloat(inputValue) * 453600;
+    }
+
+    if (toUnit === "Oz") {
+      convertedValueElement.value = parseFloat(inputValue) / 28350;
+    }
+  }
+
+  if (fromUnit === "lbs") {
+    if (toUnit === "kg") {
+      convertedValueElement.value = parseFloat(inputValue) / 2.205;
+    }
+    if (toUnit === "g") {
+      convertedValueElement.value = parseFloat(inputValue) / 2.205;
+    }
+    if (toUnit === "mg") {
+      convertedValueElement.value = parseFloat(inputValue) * 453600;
+    }
+    if (toUnit === "Oz") {
+      convertedValueElement.value = parseFloat(inputValue) * 16;
+    }
+  }
+
+  if (fromUnit === "Oz") {
+    if (toUnit === "kg") {
+      convertedValueElement.value = parseFloat(inputValue) / 35.274;
+    }
+
+    if (toUnit === "g") {
+      convertedValueElement.value = parseFloat(inputValue) * 28.35;
+    }
+
+    if (toUnit === "mg") {
+      convertedValueElement.value = parseFloat(inputValue) * 28350;
+    }
+
+    if (toUnit === "lbs") {
+      convertedValueElement.value = parseFloat(inputValue) / 16;
+    }
+  }
+}
+
+function convertTemperature() {}
+
+function convertSpeed() {}
+
+function convertPressure() {}
