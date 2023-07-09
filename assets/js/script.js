@@ -58,78 +58,20 @@ document.addEventListener("DOMContentLoaded", function () {
   let convertA = document.getElementsByClassName("convert-number")[0];
   convertA.addEventListener("click", function (event) {
     let numberBoxArray = document.getElementsByClassName("number-box");
-    /* convert kg to other units**/
+    /* mass conversion**/
     convertMass(numberBoxArray);
 
-    /* convert grams to other units**/
+    /* speed conversion**/
+    convertSpeed(numberBoxArray);
 
-    /* converting mg's to other units**/
-
-    /* lbs to other units**/
-
-    /* converting Oz to other units**/
-
-    /* converting km/h values to other units **/
-    if (conversionA.value === "km/h") {
-      if (conversionB.value === "mp/h") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 1.609;
-      }
-      if (conversionB.value === "m/s") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 3.6;
-      }
-    }
+    /* pressure conversion**/
+    convertSpeed(numberBoxArray);
     /* converting mp/h values to other units**/
-    if (conversionA.value === "mp/h") {
-      if (conversionB.value === "km/h") {
-        let inputValue = document.getElementById("number-box").value;
 
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 1.609;
-      }
-      if (conversionB.value === "m/s") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 2.237;
-      }
-    }
     /* converting m/s values to other units **/
-    if (conversionA.value === "m/s") {
-      if (conversionB.value === "km/h") {
-        let inputValue = document.getElementById("number-box").value;
 
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 3.6;
-      }
-      if (conversionB.value === "mp/h") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 2.237;
-      }
-    }
     /* converting torr to other units **/
-    if (conversionA.value === "Torr") {
-      if (conversionB.value === "pa") {
-        let inputValue = document.getElementById("number-box").value;
 
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 133.3;
-      }
-
-      if (conversionB.value === "bar") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 750.1;
-      }
-    }
     /* converting pa to other units**/
     if (conversionA.value === "Pa") {
       if (conversionB.value === "Torr") {
@@ -309,8 +251,58 @@ function convertMass(numberBoxArray) {
   }
 }
 
+/* convert speed refactoring*/
+function convertSpeed(numberBoxArray) {
+  const fromUnit = numberBoxArray[1].value;
+  const toUnit = numberBoxArray[3].value;
+  const inputValue = numberBoxArray[0].value;
+
+  let convertedValueElement = numberBoxArray[2];
+
+  if (fromUnit === "km/h") {
+    if (toUnit === "mp/h") {
+      convertedValueElement.value = parseFloat(inputValue) / 1.609;
+    }
+    if (toUnit === "m/s") {
+      convertedValueElement.value = parseFloat(inputValue) / 3.6;
+    }
+  }
+  if (fromUnit === "mp/h") {
+    if (toUnit === "km/h") {
+      convertedValueElement.value = parseFloat(inputValue) * 1.609;
+    }
+    if (toUnit === "m/s") {
+      convertedValueElement.value = parseFloat(inputValue) / 2.237;
+    }
+  }
+
+  if (fromUnit === "m/s") {
+    if (toUnit === "km/h") {
+      convertedValueElement.value = parseFloat(inputValue) * 3.6;
+    }
+    if (toUnit === "mp/h") {
+      convertedValueElement.value = parseFloat(inputValue) * 2.237;
+    }
+  }
+}
+
+/* convert speed refactoring**/
+function convertPressure(numberBoxArray) {
+  const fromUnit = numberBoxArray[1].value;
+  const toUnit = numberBoxArray[3].value;
+  const inputValue = numberBoxArray[0].value;
+
+  let convertedValueElement = numberBoxArray[2];
+
+  if (fromUnit === "Torr") {
+    if (toUnit === "pa") {
+      convertedValueElement.value = parseFloat(inputValue) * 133.3;
+    }
+
+    if (toUnit === "bar") {
+      convertedValueElement.value = parseFloat(inputValue) / 750.1;
+    }
+  }
+}
+
 function convertTemperature() {}
-
-function convertSpeed() {}
-
-function convertPressure() {}
