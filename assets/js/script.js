@@ -5,9 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let flexTiles = document.getElementsByClassName("tile-flex-child");
 
   for (let flexTile of flexTiles) {
-    flexTile.addEventListener("click", function (event) {
-      console.log(this.getAttribute("value"));
-    });
+    flexTile.addEventListener("click", loadUnits);
   }
 
   /*if (measrueTypeVal === "pressure") {
@@ -302,6 +300,50 @@ document.addEventListener("DOMContentLoaded", function () {
 function runConverter() {}
 
 function calculateConversion() {}
+
+/* this funtion loading the units*/
+function loadUnits(event) {
+  let tileValue = this.getAttribute("value");
+
+  let conversionA = document.getElementById("conversion");
+  let conversionB = document.getElementById("conversion-1");
+  conversionA.innerHTML = "";
+  conversionB.innerHTML = "";
+
+  /*loading mass unit*/
+  let massUnits2 = ["kg", "g", "mg", "lbs", "Oz"];
+  if (tileValue === "mass") {
+    for (let unit of massUnits2) {
+      createUnitOption(unit, conversionA);
+      createUnitOption(unit, conversionB);
+    }
+  }
+  /*loading temperature unit*/
+  let tempUnits2 = ["Degree celcius", "fahrenheit", "kelvin"];
+  if (tileValue === "temperature") {
+    for (let unit of tempUnits2) {
+      createUnitOption(unit, conversionA);
+      createUnitOption(unit, conversionB);
+    }
+  }
+  /*loading speed unit*/
+  let speedUnits2 = ["km/h", "mp/h", "m/s"];
+  if (tileValue === "speed") {
+    for (let unit of speedUnits2) {
+      createUnitOption(unit, conversionA);
+      createUnitOption(unit, conversionB);
+    }
+  }
+  /*loading pressure unit*/
+  let pressureUnits2 = ["Torr", "pa", "bar"];
+  if (tileValue === "pressure") {
+    for (let unit of pressureUnits2) {
+      createUnitOption(unit, conversionA);
+      createUnitOption(unit, conversionB);
+    }
+  }
+}
+
 /* declare a function to reuse create , appendChild and populate measuring unit to option elements  **/
 function createUnitOption(unit, selectElement) {
   let option = document.createElement("option");
