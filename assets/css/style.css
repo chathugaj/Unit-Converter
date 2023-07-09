@@ -3,7 +3,7 @@
 body {
   font-family: Ysabeau Office, sans-serif;
   /* font-weight: 300; */
-  background-color: wheat;
+  background-color: #e5e5ed;
   max-width: 2000px;
   font-size: 100%;
 }
@@ -77,8 +77,18 @@ select {
 .tile-flex-child {
   color: #33539e;
 }
+
 .tile-flex-child:hover {
   cursor: pointer;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(127, 172, 214, 1) 100%
+  );
+}
+
+.tile-flex-child-selected {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,

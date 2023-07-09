@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let pressureUnits2 = ["Torr", "pa", "bar"];
-  let conversionA = document.getElementById("conversion");
-  let conversionB = document.getElementById("conversion-1");
   let flexTiles = document.getElementsByClassName("tile-flex-child");
+  let conversionHistory = [];
 
   for (let flexTile of flexTiles) {
     flexTile.addEventListener("click", loadUnits);
@@ -12,17 +10,30 @@ document.addEventListener("DOMContentLoaded", function () {
   let convertA = document.getElementsByClassName("convert-number")[0];
   convertA.addEventListener("click", function (event) {
     let numberBoxArray = document.getElementsByClassName("number-box");
+
+    let currentConversion = document
+      .getElementsByClassName("tile-flex-child-selected")[0]
+      .getAttribute("value");
+
     /* mass conversion**/
-    convertMass(numberBoxArray);
+    if (currentConversion === "mass") {
+      convertMass(numberBoxArray, conversionHistory);
+    }
 
     /* speed conversion**/
-    convertSpeed(numberBoxArray);
+    if (currentConversion === "speed") {
+      convertSpeed(numberBoxArray, conversionHistory);
+    }
 
     /* pressure conversion**/
-    convertPressure(numberBoxArray);
+    if (currentConversion === "pressure") {
+      convertPressure(numberBoxArray, conversionHistory);
+    }
 
     /* temperature conversion**/
-    convertTemperature(numberBoxArray);
+    if (currentConversion === "temperature") {
+      convertTemperature(numberBoxArray, conversionHistory);
+    }
   });
 });
 
@@ -33,6 +44,13 @@ function calculateConversion() {}
 /* this funtion loading the units*/
 function loadUnits(event) {
   let tileValue = this.getAttribute("value");
+  let alreadySelected = document.getElementsByClassName(
+    "tile-flex-child-selected"
+  )[0];
+  if (alreadySelected) {
+    alreadySelected.classList.remove("tile-flex-child-selected");
+  }
+  this.classList.add("tile-flex-child-selected");
 
   let conversionA = document.getElementById("conversion");
   let conversionB = document.getElementById("conversion-1");
@@ -79,12 +97,20 @@ function createUnitOption(unit, selectElement) {
   selectElement.appendChild(option);
   option.innerHTML = unit;
 }
+/* create a function to build a histiroy**/
+function addToHistory(historyConvert, conversionHistory) {
+  if (conversionHistory.length === 5) {
+    conversionHistory.shift();
+  }
+  conversionHistory.push(historyConvert);
+  console.log(conversionHistory);
+}
+
 /* convert mass refactoring**/
-function convertMass(numberBoxArray) {
+function convertMass(numberBoxArray, conversionHistory) {
   const fromUnit = numberBoxArray[1].value;
   const toUnit = numberBoxArray[3].value;
   const inputValue = numberBoxArray[0].value;
-
   let convertedValueElement = numberBoxArray[2];
 
   if (fromUnit === "kg") {
@@ -128,7 +154,7 @@ function convertMass(numberBoxArray) {
       convertedValueElement.value = parseFloat(inputValue) / 1000;
     }
     if (toUnit === "lbs") {
-      convertedValueElement.value = parseFloat(inputValue) * 453600;
+      convertedValueElement.value = parseFloat(inputValue) / 453600;
     }
 
     if (toUnit === "Oz") {
@@ -168,10 +194,18 @@ function convertMass(numberBoxArray) {
       convertedValueElement.value = parseFloat(inputValue) / 16;
     }
   }
+  const historyConvert = {
+    fromValue: inputValue,
+    toValue: convertedValueElement.value,
+    fromUnit: fromUnit,
+    toUnit: toUnit,
+  };
+
+  addToHistory(historyConvert, conversionHistory);
 }
 
 /* convert speed refactoring*/
-function convertSpeed(numberBoxArray) {
+function convertSpeed(numberBoxArray, conversionHistory) {
   const fromUnit = numberBoxArray[1].value;
   const toUnit = numberBoxArray[3].value;
   const inputValue = numberBoxArray[0].value;
@@ -203,10 +237,19 @@ function convertSpeed(numberBoxArray) {
       convertedValueElement.value = parseFloat(inputValue) * 2.237;
     }
   }
+
+  const historyConvert = {
+    fromValue: inputValue,
+    toValue: convertedValueElement.value,
+    fromUnit: fromUnit,
+    toUnit: toUnit,
+  };
+
+  addToHistory(historyConvert, conversionHistory);
 }
 
 /* convert pressure refactoring**/
-function convertPressure(numberBoxArray) {
+function convertPressure(numberBoxArray, conversionHistory) {
   const fromUnit = numberBoxArray[1].value;
   const toUnit = numberBoxArray[3].value;
   const inputValue = numberBoxArray[0].value;
@@ -242,9 +285,17 @@ function convertPressure(numberBoxArray) {
       convertedValueElement.value = parseFloat(inputValue) * 100000;
     }
   }
-}
+  const historyConvert = {
+    fromValue: inputValue,
+    toValue: convertedValueElement.value,
+    fromUnit: fromUnit,
+    toUnit: toUnit,
+  };
 
-function convertTemperature(numberBoxArray) {
+  addToHistory(historyConvert, conversionHistory);
+}
+/* convert temperature**/
+function convertTemperature(numberBoxArray, conversionHistory) {
   const fromUnit = numberBoxArray[1].value;
   const toUnit = numberBoxArray[3].value;
   const inputValue = numberBoxArray[0].value;
@@ -281,4 +332,13 @@ function convertTemperature(numberBoxArray) {
       convertedValueElement.value = parseFloat(inputValue) + 273.15;
     }
   }
+
+  const historyConvert = {
+    fromValue: inputValue,
+    toValue: convertedValueElement.value,
+    fromUnit: fromUnit,
+    toUnit: toUnit,
+  };
+
+  addToHistory(historyConvert, conversionHistory);
 }
