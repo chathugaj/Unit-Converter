@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let measuretype1 = document.getElementById("measuretype");
-  let measrueTypeVal = measuretype1.value;
   let pressureUnits2 = ["Torr", "pa", "bar"];
   let conversionA = document.getElementById("conversion");
   let conversionB = document.getElementById("conversion-1");
+  let flexTiles = document.getElementsByClassName("tile-flex-child");
 
-  if (measrueTypeVal === "pressure") {
+  for (let flexTile of flexTiles) {
+    flexTile.addEventListener("click", function (event) {
+      console.log(this.getAttribute("value"));
+    });
+  }
+
+  /*if (measrueTypeVal === "pressure") {
     for (let unit of pressureUnits2) {
       createUnitOption(unit, conversionA);
       createUnitOption(unit, conversionB);
@@ -18,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     conversionA.innerHTML = "";
     conversionB.innerHTML = "";
 
-    /* loading mass unit**/
+    /* loading mass unit
     let massUnits2 = ["kg", "g", "mg", "lbs", "Oz"];
     if (event.target.value === "mass") {
       for (let unit of massUnits2) {
@@ -26,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         createUnitOption(unit, conversionB);
       }
     }
-    /* loading temperature unit**/
+    /* loading temperature unit
     let tempUnits2 = ["Degree celcius", "fahrenheit", "kelvin"];
     if (event.target.value === "temprature") {
       for (let unit of tempUnits2) {
@@ -34,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         createUnitOption(unit, conversionB);
       }
     }
-    /* loading speed unit**/
+    /* loading speed unit
     let speedUnits2 = ["km/h", "mp/h", "m/s"];
     if (event.target.value === "speed") {
       for (let unit of speedUnits2) {
@@ -42,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         createUnitOption(unit, conversionB);
       }
     }
-    /* loading pressure unit**/
+    /* loading pressure unit
 
     if (event.target.value === "pressure") {
       for (let unit of pressureUnits2) {
@@ -50,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         createUnitOption(unit, conversionB);
       }
     }
-  });
+  });*/
   /* convert button functions **/
   let convertA = document.getElementsByClassName("convert-number")[0];
   convertA.addEventListener("click", function (event) {
@@ -243,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
           parseFloat(inputValue) * 2.237;
       }
     }
-    /* converting torr to pascal **/
+    /* converting torr to other units **/
     if (conversionA.value === "Torr") {
       if (conversionB.value === "pa") {
         let inputValue = document.getElementById("number-box").value;
@@ -272,7 +277,23 @@ document.addEventListener("DOMContentLoaded", function () {
         let inputValue = document.getElementById("number-box").value;
 
         document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 750.1;
+          parseFloat(inputValue) / 100000;
+      }
+    }
+    /* converting bar to other units**/
+    if (conversionA.value === "bar") {
+      if (conversionB.value === "Torr") {
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) * 750.1;
+      }
+
+      if (conversionB.value === "pa") {
+        let inputValue = document.getElementById("number-box").value;
+
+        document.getElementById("number-box1").value =
+          parseFloat(inputValue) * 100000;
       }
     }
   });
