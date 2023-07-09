@@ -8,52 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     flexTile.addEventListener("click", loadUnits);
   }
 
-  /*if (measrueTypeVal === "pressure") {
-    for (let unit of pressureUnits2) {
-      createUnitOption(unit, conversionA);
-      createUnitOption(unit, conversionB);
-    }
-  }
-
-  measuretype1.addEventListener("change", function (event) {
-    let conversionA = document.getElementById("conversion");
-    let conversionB = document.getElementById("conversion-1");
-    conversionA.innerHTML = "";
-    conversionB.innerHTML = "";
-
-    /* loading mass unit
-    let massUnits2 = ["kg", "g", "mg", "lbs", "Oz"];
-    if (event.target.value === "mass") {
-      for (let unit of massUnits2) {
-        createUnitOption(unit, conversionA);
-        createUnitOption(unit, conversionB);
-      }
-    }
-    /* loading temperature unit
-    let tempUnits2 = ["Degree celcius", "fahrenheit", "kelvin"];
-    if (event.target.value === "temprature") {
-      for (let unit of tempUnits2) {
-        createUnitOption(unit, conversionA);
-        createUnitOption(unit, conversionB);
-      }
-    }
-    /* loading speed unit
-    let speedUnits2 = ["km/h", "mp/h", "m/s"];
-    if (event.target.value === "speed") {
-      for (let unit of speedUnits2) {
-        createUnitOption(unit, conversionA);
-        createUnitOption(unit, conversionB);
-      }
-    }
-    /* loading pressure unit
-
-    if (event.target.value === "pressure") {
-      for (let unit of pressureUnits2) {
-        createUnitOption(unit, conversionA);
-        createUnitOption(unit, conversionB);
-      }
-    }
-  });*/
   /* convert button functions **/
   let convertA = document.getElementsByClassName("convert-number")[0];
   convertA.addEventListener("click", function (event) {
@@ -66,15 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* pressure conversion**/
     convertPressure(numberBoxArray);
-    /* converting mp/h values to other units**/
 
-    /* converting m/s values to other units **/
-
-    /* converting torr to other units **/
-
-    /* converting pa to other units**/
-
-    /* converting bar to other units**/
+    /* temperature conversion**/
+    convertTemperature(numberBoxArray);
   });
 });
 
@@ -296,4 +244,41 @@ function convertPressure(numberBoxArray) {
   }
 }
 
-function convertTemperature() {}
+function convertTemperature(numberBoxArray) {
+  const fromUnit = numberBoxArray[1].value;
+  const toUnit = numberBoxArray[3].value;
+  const inputValue = numberBoxArray[0].value;
+
+  let convertedValueElement = numberBoxArray[2];
+
+  if (fromUnit === "Degree celcius") {
+    if (toUnit === "fahrenheit") {
+      convertedValueElement.value = parseFloat(inputValue) * (9 / 5) + 32;
+    }
+
+    if (toUnit === "kelvin") {
+      convertedValueElement.value = parseFloat(inputValue) + 273.15;
+    }
+  }
+
+  if (fromUnit === "fahrenheit") {
+    if (toUnit === "Degree celcius") {
+      convertedValueElement.value = parseFloat(inputValue) - 32 * (5 / 9);
+    }
+
+    if (toUnit === "kelvin") {
+      convertedValueElement.value =
+        (parseFloat(inputValue) - 32) * (5 / 9) + 273.15;
+    }
+  }
+
+  if (fromUnit === "kelvin") {
+    if (toUnit === "Degree celcius") {
+      convertedValueElement.value = parseFloat(inputValue) - 273.15;
+    }
+
+    if (toUnit === "fahrenheit") {
+      convertedValueElement.value = parseFloat(inputValue) + 273.15;
+    }
+  }
+}
