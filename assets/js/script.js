@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     convertSpeed(numberBoxArray);
 
     /* pressure conversion**/
-    convertSpeed(numberBoxArray);
+    convertPressure(numberBoxArray);
     /* converting mp/h values to other units**/
 
     /* converting m/s values to other units **/
@@ -73,37 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
     /* converting torr to other units **/
 
     /* converting pa to other units**/
-    if (conversionA.value === "Pa") {
-      if (conversionB.value === "Torr") {
-        let inputValue = document.getElementById("number-box").value;
 
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 133.3;
-      }
-
-      if (conversionB.value === "bar") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) / 100000;
-      }
-    }
     /* converting bar to other units**/
-    if (conversionA.value === "bar") {
-      if (conversionB.value === "Torr") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 750.1;
-      }
-
-      if (conversionB.value === "pa") {
-        let inputValue = document.getElementById("number-box").value;
-
-        document.getElementById("number-box1").value =
-          parseFloat(inputValue) * 100000;
-      }
-    }
   });
 });
 
@@ -286,7 +257,7 @@ function convertSpeed(numberBoxArray) {
   }
 }
 
-/* convert speed refactoring**/
+/* convert pressure refactoring**/
 function convertPressure(numberBoxArray) {
   const fromUnit = numberBoxArray[1].value;
   const toUnit = numberBoxArray[3].value;
@@ -301,6 +272,26 @@ function convertPressure(numberBoxArray) {
 
     if (toUnit === "bar") {
       convertedValueElement.value = parseFloat(inputValue) / 750.1;
+    }
+  }
+
+  if (fromUnit === "pa") {
+    if (toUnit === "Torr") {
+      convertedValueElement.value = parseFloat(inputValue) * 133.3;
+    }
+
+    if (toUnit === "bar") {
+      convertedValueElement.value = parseFloat(inputValue) / 100000;
+    }
+  }
+
+  if (fromUnit === "bar") {
+    if (toUnit === "Torr") {
+      convertedValueElement.value = parseFloat(inputValue) * 750.1;
+    }
+
+    if (toUnit === "pa") {
+      convertedValueElement.value = parseFloat(inputValue) * 100000;
     }
   }
 }
