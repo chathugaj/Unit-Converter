@@ -134,7 +134,7 @@ function loadUnits(event) {
     }
   }
   /*loading temperature unit*/
-  let tempUnits2 = ["Degree celcius", "fahrenheit", "kelvin"];
+  let tempUnits2 = ["Celcius", "Fahrenheit", "Kelvin"];
   if (tileValue === "temperature") {
     for (let unit of tempUnits2) {
       createUnitOption(unit, conversionA);
@@ -182,83 +182,95 @@ function convertMass(numberBoxArray, conversionHistory) {
 
   if (fromUnit === "kg") {
     if (toUnit === "g") {
-      convertedValueElement.value = parseFloat(inputValue) * 1000;
+      convertedValueElement.value = (parseFloat(inputValue) * 1000).toFixed(2);
     }
     if (toUnit === "mg") {
-      convertedValueElement.value = parseFloat(inputValue) * 1000000;
+      convertedValueElement.value = (parseFloat(inputValue) * 1000000).toFixed(
+        2
+      );
     }
 
     if (toUnit === "lbs") {
-      convertedValueElement.value = parseFloat(inputValue) * 2.205;
+      convertedValueElement.value = (parseFloat(inputValue) * 2.205).toFixed(2);
     }
     if (toUnit === "Oz") {
-      convertedValueElement.value = parseFloat(inputValue) * 35.274;
+      convertedValueElement.value = (parseFloat(inputValue) * 35.274).toFixed(
+        2
+      );
     }
   }
 
   if (fromUnit === "g") {
     if (toUnit === "kg") {
-      convertedValueElement.value = parseFloat(inputValue) / 1000;
+      convertedValueElement.value = (parseFloat(inputValue) / 1000).toFixed(2);
     }
     if (toUnit === "mg") {
-      convertedValueElement.value = parseFloat(inputValue) * 1000;
+      convertedValueElement.value = (parseFloat(inputValue) * 1000).toFixed(2);
     }
 
     if (toUnit === "lbs") {
-      convertedValueElement.value = parseFloat(inputValue) / 453.6;
+      convertedValueElement.value = (parseFloat(inputValue) / 453.6).toFixed(2);
     }
 
     if (toUnit === "Oz") {
-      convertedValueElement.value = parseFloat(inputValue) / 28.3;
+      convertedValueElement.value = (parseFloat(inputValue) / 28.3).toFixed(2);
     }
   }
 
   if (fromUnit === "mg") {
     if (toUnit === "kg") {
-      convertedValueElement.value = parseFloat(inputValue) / 1000000;
+      convertedValueElement.value = (parseFloat(inputValue) / 1000000).toFixed(
+        2
+      );
     }
     if (toUnit === "g") {
-      convertedValueElement.value = parseFloat(inputValue) / 1000;
+      convertedValueElement.value = (parseFloat(inputValue) / 1000).toFixed(2);
     }
     if (toUnit === "lbs") {
-      convertedValueElement.value = parseFloat(inputValue) / 453600;
+      convertedValueElement.value = (parseFloat(inputValue) / 453600).toFixed(
+        2
+      );
     }
 
     if (toUnit === "Oz") {
-      convertedValueElement.value = parseFloat(inputValue) / 28350;
+      convertedValueElement.value = (parseFloat(inputValue) / 28350).toFixed(2);
     }
   }
 
   if (fromUnit === "lbs") {
     if (toUnit === "kg") {
-      convertedValueElement.value = parseFloat(inputValue) / 2.205;
+      convertedValueElement.value = (parseFloat(inputValue) / 2.205).toFixed(2);
     }
     if (toUnit === "g") {
-      convertedValueElement.value = parseFloat(inputValue) / 2.205;
+      convertedValueElement.value = (parseFloat(inputValue) / 2.205).toFixed(2);
     }
     if (toUnit === "mg") {
-      convertedValueElement.value = parseFloat(inputValue) * 453600;
+      convertedValueElement.value = (parseFloat(inputValue) * 453600).toFixed(
+        2
+      );
     }
     if (toUnit === "Oz") {
-      convertedValueElement.value = parseFloat(inputValue) * 16;
+      convertedValueElement.value = (parseFloat(inputValue) * 16).toFixed(2);
     }
   }
 
   if (fromUnit === "Oz") {
     if (toUnit === "kg") {
-      convertedValueElement.value = parseFloat(inputValue) / 35.274;
+      convertedValueElement.value = (parseFloat(inputValue) / 35.274).toFixed(
+        2
+      );
     }
 
     if (toUnit === "g") {
-      convertedValueElement.value = parseFloat(inputValue) * 28.35;
+      convertedValueElement.value = (parseFloat(inputValue) * 28.35).toFixed(2);
     }
 
     if (toUnit === "mg") {
-      convertedValueElement.value = parseFloat(inputValue) * 28350;
+      convertedValueElement.value = (parseFloat(inputValue) * 28350).toFixed(2);
     }
 
     if (toUnit === "lbs") {
-      convertedValueElement.value = parseFloat(inputValue) / 16;
+      convertedValueElement.value = (parseFloat(inputValue) / 16).toFixed(2);
     }
   }
   const historyConvert = {
@@ -281,27 +293,27 @@ function convertSpeed(numberBoxArray, conversionHistory) {
 
   if (fromUnit === "km/h") {
     if (toUnit === "mp/h") {
-      convertedValueElement.value = parseFloat(inputValue) / 1.609;
+      convertedValueElement.value = (parseFloat(inputValue) / 1.609).toFixed(2);
     }
     if (toUnit === "m/s") {
-      convertedValueElement.value = parseFloat(inputValue) / 3.6;
+      convertedValueElement.value = (parseFloat(inputValue) / 3.6).toFixed(2);
     }
   }
   if (fromUnit === "mp/h") {
     if (toUnit === "km/h") {
-      convertedValueElement.value = parseFloat(inputValue) * 1.609;
+      convertedValueElement.value = (parseFloat(inputValue) * 1.609).toFixed(2);
     }
     if (toUnit === "m/s") {
-      convertedValueElement.value = parseFloat(inputValue) / 2.237;
+      convertedValueElement.value = (parseFloat(inputValue) / 2.237).toFixed(2);
     }
   }
 
   if (fromUnit === "m/s") {
     if (toUnit === "km/h") {
-      convertedValueElement.value = parseFloat(inputValue) * 3.6;
+      convertedValueElement.value = (parseFloat(inputValue) * 3.6).toFixed(2);
     }
     if (toUnit === "mp/h") {
-      convertedValueElement.value = parseFloat(inputValue) * 2.237;
+      convertedValueElement.value = (parseFloat(inputValue) * 2.237).toFixed(2);
     }
   }
 
@@ -325,31 +337,35 @@ function convertPressure(numberBoxArray, conversionHistory) {
 
   if (fromUnit === "Torr") {
     if (toUnit === "pa") {
-      convertedValueElement.value = parseFloat(inputValue) * 133.3;
+      convertedValueElement.value = (parseFloat(inputValue) * 133.3).toFixed(2);
     }
 
     if (toUnit === "bar") {
-      convertedValueElement.value = parseFloat(inputValue) / 750.1;
+      convertedValueElement.value = (parseFloat(inputValue) / 750.1).toFixed(2);
     }
   }
 
   if (fromUnit === "pa") {
     if (toUnit === "Torr") {
-      convertedValueElement.value = parseFloat(inputValue) * 133.3;
+      convertedValueElement.value = (parseFloat(inputValue) * 133.3).toFixed(2);
     }
 
     if (toUnit === "bar") {
-      convertedValueElement.value = parseFloat(inputValue) / 100000;
+      convertedValueElement.value = (parseFloat(inputValue) / 100000).toFixed(
+        2
+      );
     }
   }
 
   if (fromUnit === "bar") {
     if (toUnit === "Torr") {
-      convertedValueElement.value = parseFloat(inputValue) * 750.1;
+      convertedValueElement.value = (parseFloat(inputValue) * 750.1).toFixed(2);
     }
 
     if (toUnit === "pa") {
-      convertedValueElement.value = parseFloat(inputValue) * 100000;
+      convertedValueElement.value = (parseFloat(inputValue) * 100000).toFixed(
+        2
+      );
     }
   }
   const historyConvert = {
@@ -369,34 +385,49 @@ function convertTemperature(numberBoxArray, conversionHistory) {
 
   let convertedValueElement = numberBoxArray[2];
 
-  if (fromUnit === "Degree celcius") {
-    if (toUnit === "fahrenheit") {
-      convertedValueElement.value = parseFloat(inputValue) * (9 / 5) + 32;
+  if (fromUnit === "Celcius") {
+    if (toUnit === "Fahrenheit") {
+      convertedValueElement.value = (
+        parseFloat(inputValue) * (9 / 5) +
+        32
+      ).toFixed(2);
     }
 
-    if (toUnit === "kelvin") {
-      convertedValueElement.value = parseFloat(inputValue) + 273.15;
-    }
-  }
-
-  if (fromUnit === "fahrenheit") {
-    if (toUnit === "Degree celcius") {
-      convertedValueElement.value = parseFloat(inputValue) - 32 * (5 / 9);
-    }
-
-    if (toUnit === "kelvin") {
-      convertedValueElement.value =
-        (parseFloat(inputValue) - 32) * (5 / 9) + 273.15;
+    if (toUnit === "Kelvin") {
+      convertedValueElement.value = (parseFloat(inputValue) + 273.15).toFixed(
+        2
+      );
     }
   }
 
-  if (fromUnit === "kelvin") {
-    if (toUnit === "Degree celcius") {
-      convertedValueElement.value = parseFloat(inputValue) - 273.15;
+  if (fromUnit === "Fahrenheit") {
+    if (toUnit === "Celcius") {
+      convertedValueElement.value = (
+        parseFloat(inputValue) -
+        32 * (5 / 9)
+      ).toFixed(2);
     }
 
-    if (toUnit === "fahrenheit") {
-      convertedValueElement.value = parseFloat(inputValue) + 273.15;
+    if (toUnit === "Kelvin") {
+      convertedValueElement.value = (
+        (parseFloat(inputValue) - 32) * (5 / 9) +
+        273.15
+      ).toFixed(2);
+    }
+  }
+
+  if (fromUnit === "Kelvin") {
+    if (toUnit === "Celcius") {
+      convertedValueElement.value = (parseFloat(inputValue) - 273.15).toFixed(
+        2
+      );
+    }
+
+    if (toUnit === "Fahrenheit") {
+      convertedValueElement.value = (
+        (parseFloat(inputValue) - 273.15) * (9 / 5) +
+        32
+      ).toFixed(2);
     }
   }
 
