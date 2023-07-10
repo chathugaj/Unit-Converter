@@ -55,6 +55,7 @@ select {
 }
 .tile-container-flex-parent {
   max-width: 1900px;
+  height: fit-content;
 }
 .convert-area-2 {
   background-color: #7facd6;
@@ -209,9 +210,7 @@ select {
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 38%;
     border-radius: 5px;
-    height: 45vh;
   }
 
   .tile-flex-child {
@@ -273,6 +272,11 @@ select {
     margin: 10% 5%;
   }
 
+  .conversion-A > input,
+  .conversion-B > input {
+    width: 60%;
+  }
+
   .conversion-B > input,
   .conversion-B > select {
     color: #33539e;
@@ -315,6 +319,11 @@ select {
   }
 
   .conversion-A > input,
+  .conversion-B > input {
+    width: 60%;
+  }
+
+  .conversion-A > input,
   .conversion-A > input:focus,
   .conversion-A > select {
     color: white;
@@ -347,7 +356,6 @@ select {
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 65vh;
     border-radius: 5px;
   }
 
@@ -373,11 +381,9 @@ select {
     border-color: lightgray;
   }
 
-  .convert-area-1 {
-    height: 24vh;
-  }
+  .convert-area-1,
   .convert-area-2 {
-    height: 18vh;
+    height: 35vh;
   }
 }
 
@@ -389,7 +395,6 @@ select {
 
   .tile-container-flex-parent {
     flex-direction: row;
-    height: 18vh;
   }
 
   .tile-flex-child {
@@ -403,13 +408,16 @@ select {
     height: 80vh;
   }
 
-  .convert-area-1 {
-    height: 40vh;
+  .convert-area-1,
+  .convert-area-2 {
+    height: 37vh;
   }
 
-  .convert-area-2 {
-    height: 40vh;
+  .conversion-A > input,
+  .conversion-B > input {
+    width: 40%;
   }
+
   .conversion-A > input,
   .conversion-A > input:focus,
   .conversion-A > select {
@@ -423,31 +431,10 @@ select {
 }
 
 @media only screen and (min-width: 900px) {
-  .tile-container-flex-parent {
-    height: 25vh;
-  }
   .convert-area-1 {
     height: 37vh;
   }
   .convert-area-1 {
     height: 37vh;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .tile-container-flex-parent {
-    height: 25vh;
-  }
-  .convert-area-1 {
-    height: 37vh;
-  }
-  .convert-area-1 {
-    height: 37vh;
-  }
-  .conversion-A {
-    margin: 4% 16%;
-  }
-  .conversion-B {
-    margin: 4% 15%;
   }
 }
