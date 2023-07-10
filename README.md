@@ -105,7 +105,7 @@ Once the master branch has been selected, the page will be automatically refresh
 ### Content
 - Modal is taken from W3Schools
   [[How To Create a Modal Box](https://www.w3schools.com/howto/howto_css_modals.asp)]
-- The icons on benefits sections and footer were taken from 
+- The icons on header and measure type button bar were taken from 
   [font awesome](https://fontawesome.com/icons)
 - font-family for the website were taken from google font
 [google font](https://fonts.google.com/)
