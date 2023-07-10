@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let conversionHistory = [];
-  initModal(conversionHistory);
-
   document
     .getElementById("continue-button")
     .addEventListener("click", function () {
       this.parentElement.style.display = "none";
       document.getElementById("app").style.display = "block";
     });
+
+  runConverter();
+});
+
+function runConverter() {
+  let conversionHistory = [];
+  initModal(conversionHistory);
 
   for (let flexTile of document.getElementsByClassName("tile-flex-child")) {
     flexTile.addEventListener("click", loadUnits);
@@ -19,31 +23,33 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function (event) {
       let numberBoxArray = document.getElementsByClassName("number-box");
 
-      let currentConversion = document
-        .getElementsByClassName("tile-flex-child-selected")[0]
-        .getAttribute("value");
+      if (validate(numberBoxArray)) {
+        let currentConversion = document
+          .getElementsByClassName("tile-flex-child-selected")[0]
+          .getAttribute("value");
 
-      /* mass conversion**/
-      if (currentConversion === "mass") {
-        convertMass(numberBoxArray, conversionHistory);
-      }
+        /* mass conversion**/
+        if (currentConversion === "mass") {
+          convertMass(numberBoxArray, conversionHistory);
+        }
 
-      /* speed conversion**/
-      if (currentConversion === "speed") {
-        convertSpeed(numberBoxArray, conversionHistory);
-      }
+        /* speed conversion**/
+        if (currentConversion === "speed") {
+          convertSpeed(numberBoxArray, conversionHistory);
+        }
 
-      /* pressure conversion**/
-      if (currentConversion === "pressure") {
-        convertPressure(numberBoxArray, conversionHistory);
-      }
+        /* pressure conversion**/
+        if (currentConversion === "pressure") {
+          convertPressure(numberBoxArray, conversionHistory);
+        }
 
-      /* temperature conversion**/
-      if (currentConversion === "temperature") {
-        convertTemperature(numberBoxArray, conversionHistory);
+        /* temperature conversion**/
+        if (currentConversion === "temperature") {
+          convertTemperature(numberBoxArray, conversionHistory);
+        }
       }
     });
-});
+}
 
 function initModal(conversionHistory) {
   // Get the modal
@@ -86,9 +92,22 @@ function initModal(conversionHistory) {
   };
 }
 
-function runConverter() {}
+function validate(numberBoxArray) {
+  if (!numberBoxArray[0].value) {
+    alert("Input is empty");
+    return false;
+  }
+  if (!numberBoxArray[1].value) {
+    alert("Unit to convert from is empty");
+    return false;
+  }
+  if (!numberBoxArray[3].value) {
+    alert("Unit to convert to is empty");
+    return false;
+  }
 
-function calculateConversion() {}
+  return true;
+}
 
 /* this funtion loading the units*/
 function loadUnits(event) {
@@ -152,7 +171,6 @@ function addToHistory(historyConvert, conversionHistory) {
     conversionHistory.shift();
   }
   conversionHistory.push(historyConvert);
-  console.log(conversionHistory);
 }
 
 /* convert mass refactoring**/
