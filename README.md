@@ -29,11 +29,14 @@ It contains a simple interface that can be used by any user using devices with v
 
 ##### Conversion history
 - Conversion history shows the latest five conversions done by a user.
-![History button](./docs/history_button.png)
 ![History view](./docs/history_view.png)
 
+##### Validation messages
+- Validation messages are shown to users when user provies invalid inputs.
+![Validation messages](./docs/validation_message.png)
+
 ### Features to add
-- Add support for more measure types (ex: Volume)
+- Add support for more measure types (ex: Volume) 
 - Show the conversion formula
 
 ## Testing
@@ -46,7 +49,8 @@ Tested the site with the following browsers.
 
 ### Test matrix
 
-TODO
+Following are the test run on the application in order to verify application is working as intended
+![Test criteria](./docs/test_criteria.png)
 
 ### Responsiveness
 
@@ -69,15 +73,16 @@ TODO
 Validated the HTML, CSS and Javascript using W3C Html Validator, Jigsaw Validator and JSHint
 * Link to index.html validation [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchathugaj.github.io%2Funit-converter%2Findex.html)
 * Link to CSS validation [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fchathugaj.github.io%2Funit-converter%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-* Javascript validation ![JSHINT VALIDATION](./doc/jshint_validation.png)
+* Javascript validation ![JSHINT VALIDATION](./docs/jshint_validation.png)
 
 ### Performance
 
-TODO
+Tested accessiblity, performance and best practices using the lighthouse plugin in Google Chrome developer tools
+![App performance](./docs/performance_app.png) 
 
 ## Unfixed bugs
 
-TODO
+Did not find any unintentional bugs in the final testing rounds
 
 ## Further improvements
 - More measuring units can be supported
@@ -98,7 +103,7 @@ Once the master branch has been selected, the page will be automatically refresh
 
 ## Credits
 ### Content
-- Modal implementation is taken from W3Schools
+- Modal is taken from W3Schools
   [[How To Create a Modal Box](https://www.w3schools.com/howto/howto_css_modals.asp)]
 - The icons on benefits sections and footer were taken from 
   [font awesome](https://fontawesome.com/icons)
@@ -108,3 +113,5 @@ Once the master branch has been selected, the page will be automatically refresh
 ### Media 
 - Favicon is geenrated using the following website.
   - [favicon](https://favicon.io/favicon-generator/)
+- Checked site responsiveness with 
+  - [amiresponsive](https://ui.dev/amiresponsive)
