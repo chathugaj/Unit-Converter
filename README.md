@@ -5,36 +5,35 @@
 Unit Converter is an application that provides the user the capability of converting quantities of different measurement units to another type of measurement unit of the same type of measurement.
 It contains a simple interface that can be used by any user using devices with variying screen sizes.
 
-![Response design](./doc/responsive_site.png)
+![Response design](./docs/responsive_site.png)
 
 ## Features
 ### Existing Features
 #### Welcome screen
 - This is the landing screen for the application. It contains the application name and a button to continue to the next screen, where the actual converter application is.
-![Welcome screen](./doc/welcome_screen.png)
+![Welcome screen](./docs/welcome_screen.png)
 
 #### Application screen
 - This screen contains the converter application. The application contains various features which are listed below with a short description.
-![Application](./doc/application.png)
+![Application](./docs/application.png)
 
 ##### Measure type button bar
 
 - In this four buttons bar user can choose which measure type user needs to convert, between mass,temperature,pressure and speed. Selecting a measure type will load the correct measurement units to the application screen
-![Button bar](./doc/button_bar.png)
+![Button bar](./docs/button_bar.png)
 
 ##### Converter area
 
 - Converter area contains two sections, input section and the converted result output section
-![Converter area](./doc/converter_area.png)
+![Converter area](./docs/converter_area.png)
 
 ##### Conversion history
 - Conversion history shows the latest five conversions done by a user.
-![History button](./doc/history_button.png)
-![History view](./doc/history_view.png)
+![History button](./docs/history_button.png)
+![History view](./docs/history_view.png)
 
 ### Features to add
-- More measure types can be added
-- More measuring units can be supported
+- Add support for more measure types (ex: Volume)
 - Show the conversion formula
 
 ## Testing
@@ -71,3 +70,41 @@ Validated the HTML, CSS and Javascript using W3C Html Validator, Jigsaw Validato
 * Link to index.html validation [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchathugaj.github.io%2Funit-converter%2Findex.html)
 * Link to CSS validation [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fchathugaj.github.io%2Funit-converter%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 * Javascript validation ![JSHINT VALIDATION](./doc/jshint_validation.png)
+
+### Performance
+
+TODO
+
+## Unfixed bugs
+
+TODO
+
+## Further improvements
+- More measuring units can be supported
+- Application starts with a default selected measure type and relevant units loaded in the select elements
+- If from and to units are the same show the same output as the input
+
+
+## Deployment
+The site was deployed to GitHub pages.
+The steps to deploy are as follows:
+In the [Github repository](https://github.com/chathugaj/unit-converter), navigate to the Settings tab
+From the source section drop-down menu, select the Master Branch,
+
+Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+- live link can be found here 
+  [Live link](https://chathugaj.github.io/unit-converter/)
+
+## Credits
+### Content
+- Modal implementation is taken from W3Schools
+  [[How To Create a Modal Box](https://www.w3schools.com/howto/howto_css_modals.asp)]
+- The icons on benefits sections and footer were taken from 
+  [font awesome](https://fontawesome.com/icons)
+- font-family for the website were taken from google font
+[google font](https://fonts.google.com/)
+
+### Media 
+- Favicon is geenrated using the following website.
+  - [favicon](https://favicon.io/favicon-generator/)
