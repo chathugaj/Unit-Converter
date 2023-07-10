@@ -4,6 +4,7 @@
 
 Unit Converter is an application that provides the user the capability of converting quantities of different measurement units to another type of measurement unit of the same type of measurement.
 It contains a simple interface that can be used by any user using devices with variying screen sizes.
+This can be only use to do approximate conversions.
 
 ![Response design](./docs/responsive_site.png)
 
@@ -82,7 +83,7 @@ Tested accessiblity, performance and best practices using the lighthouse plugin 
 
 ## Unfixed bugs
 
-Did not find any unintentional bugs in the final testing rounds
+- Convertered values can be deviate between actual value +2 or -2
 
 ## Further improvements
 - More measuring units can be supported

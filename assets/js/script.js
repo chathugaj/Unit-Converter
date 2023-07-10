@@ -216,7 +216,7 @@ function convertMass(numberBoxArray, conversionHistory) {
     }
 
     if (toUnit === "Oz") {
-      convertedValueElement.value = (parseFloat(inputValue) / 28.3).toFixed(2);
+      convertedValueElement.value = (parseFloat(inputValue) / 28.35).toFixed(2);
     }
   }
 
@@ -245,7 +245,7 @@ function convertMass(numberBoxArray, conversionHistory) {
       convertedValueElement.value = (parseFloat(inputValue) / 2.205).toFixed(2);
     }
     if (toUnit === "g") {
-      convertedValueElement.value = (parseFloat(inputValue) / 2.205).toFixed(2);
+      convertedValueElement.value = (parseFloat(inputValue) * 453.6).toFixed(2);
     }
     if (toUnit === "mg") {
       convertedValueElement.value = (parseFloat(inputValue) * 453600).toFixed(
@@ -350,7 +350,7 @@ function convertPressure(numberBoxArray, conversionHistory) {
 
   if (fromUnit === "pa") {
     if (toUnit === "Torr") {
-      convertedValueElement.value = (parseFloat(inputValue) * 133.3).toFixed(2);
+      convertedValueElement.value = (parseFloat(inputValue) / 133.3).toFixed(2);
     }
 
     if (toUnit === "bar") {
@@ -406,8 +406,8 @@ function convertTemperature(numberBoxArray, conversionHistory) {
   if (fromUnit === "Fahrenheit") {
     if (toUnit === "Celcius") {
       convertedValueElement.value = (
-        parseFloat(inputValue) -
-        32 * (5 / 9)
+        (parseFloat(inputValue) - 32) *
+        (5 / 9)
       ).toFixed(2);
     }
 
