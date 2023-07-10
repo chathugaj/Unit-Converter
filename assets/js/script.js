@@ -1,4 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let conversionHistory = [];
+  initModal(conversionHistory);
+
+  document
+    .getElementById("continue-button")
+    .addEventListener("click", function () {
+      this.parentElement.style.display = "none";
+      document.getElementById("app").style.display = "block";
+    });
+
+  for (let flexTile of document.getElementsByClassName("tile-flex-child")) {
+    flexTile.addEventListener("click", loadUnits);
+  }
+
+  /* convert button functions **/
+  document
+    .getElementsByClassName("convert-number")[0]
+    .addEventListener("click", function (event) {
+      let numberBoxArray = document.getElementsByClassName("number-box");
+
+      let currentConversion = document
+        .getElementsByClassName("tile-flex-child-selected")[0]
+        .getAttribute("value");
+
+      /* mass conversion**/
+      if (currentConversion === "mass") {
+        convertMass(numberBoxArray, conversionHistory);
+      }
+
+      /* speed conversion**/
+      if (currentConversion === "speed") {
+        convertSpeed(numberBoxArray, conversionHistory);
+      }
+
+      /* pressure conversion**/
+      if (currentConversion === "pressure") {
+        convertPressure(numberBoxArray, conversionHistory);
+      }
+
+      /* temperature conversion**/
+      if (currentConversion === "temperature") {
+        convertTemperature(numberBoxArray, conversionHistory);
+      }
+    });
+});
+
+function initModal(conversionHistory) {
   // Get the modal
   var modal = document.getElementById("myModal");
 
@@ -10,6 +57,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // When the user clicks on the button, open the modal
   btn.onclick = function () {
+    if (modal.children[0].children[2]) {
+      modal.children[0].removeChild(modal.children[0].children[2]);
+    }
+
+    let modalContent = "<div>";
+    for (let history of conversionHistory) {
+      modalContent += `<div class="history-item">
+        <p>${history.fromValue} ${history.fromUnit} <i class="fa-solid fa-arrow-right"></i> ${history.toValue} ${history.toUnit}</p>
+      </div>`;
+    }
+    modalContent += "</div>";
+
+    modal.children[0].insertAdjacentHTML("beforeend", modalContent);
     modal.style.display = "block";
   };
 
@@ -24,43 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.style.display = "none";
     }
   };
-  let flexTiles = document.getElementsByClassName("tile-flex-child");
-  let conversionHistory = [];
-
-  for (let flexTile of flexTiles) {
-    flexTile.addEventListener("click", loadUnits);
-  }
-
-  /* convert button functions **/
-  let convertA = document.getElementsByClassName("convert-number")[0];
-  convertA.addEventListener("click", function (event) {
-    let numberBoxArray = document.getElementsByClassName("number-box");
-
-    let currentConversion = document
-      .getElementsByClassName("tile-flex-child-selected")[0]
-      .getAttribute("value");
-
-    /* mass conversion**/
-    if (currentConversion === "mass") {
-      convertMass(numberBoxArray, conversionHistory);
-    }
-
-    /* speed conversion**/
-    if (currentConversion === "speed") {
-      convertSpeed(numberBoxArray, conversionHistory);
-    }
-
-    /* pressure conversion**/
-    if (currentConversion === "pressure") {
-      convertPressure(numberBoxArray, conversionHistory);
-    }
-
-    /* temperature conversion**/
-    if (currentConversion === "temperature") {
-      convertTemperature(numberBoxArray, conversionHistory);
-    }
-  });
-});
+}
 
 function runConverter() {}
 
