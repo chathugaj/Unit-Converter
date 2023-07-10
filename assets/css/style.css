@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@300&display=swap");
 
 body {
-  font-family: Ysabeau Office, sans-serif;
+  font-family: "Ysabeau Office", sans-serif;
   /* font-weight: 300; */
   background-color: #e5e5ed;
   max-width: 2000px;
@@ -85,10 +85,10 @@ select {
   background: white;
   color: #33539e;
   border-style: none;
-  border-color: white;
+  border-color: whitesmoke;
   height: fit-content;
   text-shadow: none;
-  font-family: Ysabeau Office, sans-serif;
+  font-family: "Ysabeau Office", sans-serif;
   font-size: 5vw;
   padding: 2%;
   border-radius: 10px;
