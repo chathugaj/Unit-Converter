@@ -50,6 +50,9 @@ select {
   height: 25px;
   width: 25%;
 }
+select {
+  width: fit-content;
+}
 .tile-container-flex-parent {
   max-width: 1900px;
 }
