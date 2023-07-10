@@ -1,4 +1,4 @@
-# ![ICON](./assets//favicon/favicon.ico) Unit Converter 
+# ![ICON](./docs/favicon.ico) Unit Converter 
 
 [LIVE LINK](https://chathugaj.github.io/unit-converter/index.html)
 
