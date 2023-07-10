@@ -26,7 +26,8 @@ function runConverter() {
       if (validate(numberBoxArray)) {
         let currentConversion = document
           .getElementsByClassName("tile-flex-child-selected")[0]
-          .getAttribute("value");
+          .children[1].textContent.toLowerCase()
+          .trim();
 
         /* mass conversion**/
         if (currentConversion === "mass") {
@@ -111,7 +112,7 @@ function validate(numberBoxArray) {
 
 /* this funtion loading the units*/
 function loadUnits(event) {
-  let tileValue = this.getAttribute("value");
+  let tileValue = this.children[1].textContent.toLowerCase().trim();
   let alreadySelected = document.getElementsByClassName(
     "tile-flex-child-selected"
   )[0];
